@@ -1,12 +1,12 @@
 import { Router } from "express";
 import { addUtilisateur, utilisateurList, removeUtilisateur, updateUtilisateur } from "../controllers/Utilisateur.js";
 
-const router = Router();
+const Utilisateurrouter = Router();
 
-router
+Utilisateurrouter
     .get("/", utilisateurList)
     .post("/", addUtilisateur)
     .put("/:id", updateUtilisateur)
     .delete("/:id", removeUtilisateur);
 
-export default router;
+export default Utilisateurrouter ;

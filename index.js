@@ -9,7 +9,8 @@ import dotenv from 'dotenv';
 import connexion from "./config/connexion.js";
 
 connexion.sync({alter:true});
-import router from "./routes/UtilisateursRotes.js";
+import Utilisateurrouter from "./routes/UtilisateursRotes.js";
+import Rolerouter from "./routes/RoleRotes.js";
 
 const app = express();
 const PORT = process.env.PORT || 5000; 
@@ -22,7 +23,8 @@ app.use(helmet())
 app.use(compression())
 
 
-app.use("/utilisateurs",router)
+app.use("/utilisateurs",Utilisateurrouter)
+app.use("/role",Rolerouter)
 
 
 
