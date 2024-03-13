@@ -1,5 +1,5 @@
 // Amener le modèle de rôle avec les relations
-import Role from "../models/Role.js";
+import {Role} from "../models/Relation.js";
 
 // Lister tous les rôles
 export const roleList = async (req, res) => {

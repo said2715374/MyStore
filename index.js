@@ -11,6 +11,8 @@ import connexion from "./config/connexion.js";
 connexion.sync({alter:true});
 import Utilisateurrouter from "./routes/UtilisateursRotes.js";
 import Rolerouter from "./routes/RoleRotes.js";
+import caisseRouter from "./routes/CaisseRoute.js";
+import revenuJournalierRouter from "./routes/RevnueRoute.js";
 
 const app = express();
 const PORT = process.env.PORT || 5000; 
@@ -25,6 +27,8 @@ app.use(compression())
 
 app.use("/utilisateurs",Utilisateurrouter)
 app.use("/role",Rolerouter)
+app.use("/caisse",caisseRouter)
+app.use("/revnue",revenuJournalierRouter)
 
 
 
