@@ -1,5 +1,5 @@
 // Import the Region model
-import Region from '../models/Region.js';
+import {Region} from '../models/Relation.js';
 
 // Controller to create a new region
 export const createRegion = async (req, res) => {

@@ -1,5 +1,5 @@
 // Import the Magasin model
-import Magasin from '../models/Magasin.js';
+import {Magasin} from '../models/Region.js';
 
 // Controller to create a new store
 export const createStore = async (req, res) => {
