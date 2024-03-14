@@ -2,9 +2,6 @@
 import Produit from '.produit.js';
 import Fournisseur from '.fournisseur.js';
 
-// Importer les types de données
-import { DataTypes } from "sequelize";
-
 // Importer la connexion à la base de données
 import database from "../config/connexion.js";
 
