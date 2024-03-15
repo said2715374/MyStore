@@ -13,6 +13,15 @@ import Utilisateurrouter from "./routes/UtilisateursRotes.js";
 import Rolerouter from "./routes/RoleRotes.js";
 import caisseRouter from "./routes/CaisseRoute.js";
 import revenuJournalierRouter from "./routes/RevnueRoute.js";
+import fournisseurRoute from "./routes/fournisseurRoute.js"
+import fourProdRouter from "./routes/fourProdRoute.js";
+import MagasinRoute from "./routes/MagasinRoute.js"
+import modePaiementRouter from "./routes/Mode_paiementRoute.js";
+import produitRouter from "./routes/ProduitRoute.js";
+import RegionRoute from "./routes/RegionRoute.js"
+import transactionRouter from "./routes/TransactionRoute.js";
+
+
 
 const app = express();
 const PORT = process.env.PORT || 5000; 
@@ -29,6 +38,13 @@ app.use("/utilisateurs",Utilisateurrouter)
 app.use("/role",Rolerouter)
 app.use("/caisse",caisseRouter)
 app.use("/revnue",revenuJournalierRouter)
+app.use("/fournisseurRoute",fournisseurRoute)
+app.use("/fourProdRouter",fourProdRouter)
+app.use("/MagasinRoute",MagasinRoute)
+app.use("/modePaiementRouter",modePaiementRouter)
+app.use("/produitRouter",produitRouter)
+app.use("/RegionRoute",RegionRoute)
+app.use("/transactionRouter",transactionRouter)
 
 
 
