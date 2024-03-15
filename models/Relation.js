@@ -4,7 +4,8 @@ import Role from "./Role.js";
 import Utilisateur from "./Utilisateurs.js";
 import Magasin from "./Magasin.js"
 import Region from "./Region.js";
-
+import Mode_paiement from "./Mode_paiement.js"; 
+import Transaction from "./Transaction.js"; 
 
 //relation Utilisateur Role
 
@@ -36,7 +37,14 @@ Magasin.hasMany(Utilisateur)
 
 Utilisateur.belongsTo(Magasin)
 
+Caisse.hasMany(Transaction);
+Transaction.belongsTo(Caisse);
 
+// Relation entre Transaction et Mode_paiment
+Transaction.belongsTo(Mode_paiement);
+
+
+export  {Mode_paiement ,Transaction}
 export {Region,Magasin}
 export {Caisse,RevnueJournalier}
 export {Role,Utilisateur}
