@@ -8,14 +8,14 @@ import compression from "compression";
 import dotenv from 'dotenv';
 import connexion from "./config/connexion.js";
 
-connexion.sync({alter:true});
+connexion.sync({force:true});
 import Utilisateurrouter from "./routes/UtilisateursRotes.js";
 import Rolerouter from "./routes/RoleRotes.js";
 import caisseRouter from "./routes/CaisseRoute.js";
 import revenuJournalierRouter from "./routes/RevnueRoute.js";
 import fournisseurRoute from "./routes/fournisseurRoute.js"
 import fourProdRouter from "./routes/fourProdRoute.js";
-import MagasinRoute from "./routes/MagasinRoute.js"
+import magasinRouter from "./routes/MagasinRoute.js"
 import modePaiementRouter from "./routes/Mode_paiementRoute.js";
 import produitRouter from "./routes/ProduitRoute.js";
 import RegionRoute from "./routes/RegionRoute.js"
@@ -40,7 +40,7 @@ app.use("/caisse",caisseRouter)
 app.use("/revnue",revenuJournalierRouter)
 app.use("/fournisseurRoute",fournisseurRoute)
 app.use("/fourProdRouter",fourProdRouter)
-app.use("/MagasinRoute",MagasinRoute)
+app.use("/magasinRouter",magasinRouter)
 app.use("/modePaiementRouter",modePaiementRouter)
 app.use("/produitRouter",produitRouter)
 app.use("/RegionRoute",RegionRoute)

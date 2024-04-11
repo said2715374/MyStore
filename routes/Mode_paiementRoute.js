@@ -1,10 +1,10 @@
 import { Router } from "express";
-import { addModePaiement, getModePaiement, removeModePaiement, updateModePaiement } from "../controllers/ModePaiement.js";
+import { addModePaiement, modePaiementList, removeModePaiement, updateModePaiement } from "../controllers/Mode_paiement.js";
 
 const modePaiementRouter = Router();
 
 modePaiementRouter
-    .get("/", getModePaiement)
+    .get("/", modePaiementList)
     .post("/", addModePaiement)
     .put("/:id", updateModePaiement)
     .delete("/:id", removeModePaiement);

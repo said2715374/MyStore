@@ -1,6 +1,6 @@
 import express from 'express';
 // Assuming your controller functions are in a file named `regionController.js`
-import { createRegion, getAllRegions, getRegionById, updateRegion, deleteRegion } from '../controllers/regionController.js';
+import { createRegion, getAllRegions, getRegionById, updateRegion, deleteRegion } from '../controllers/Region.js';
 
 const router = express.Router();
 

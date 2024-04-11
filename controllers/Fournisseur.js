@@ -1,3 +1,5 @@
+import Fournisseur from "../models/Fournisseur.js";
+
 //1.Creer Un fournisseur
 function creerFournisseur(req, res) {
     const { nom, nomEntreprise } = req.body;

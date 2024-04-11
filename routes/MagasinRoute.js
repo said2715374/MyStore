@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { magasinList, addMagasin, updateMagasin, removeMagasin } from "../controllers/MagasinController.js";
+import { magasinList, addMagasin, updateMagasin, removeMagasin } from "../controllers/Magasin.js";
 
 const magasinRouter = Router();
 

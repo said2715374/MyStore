@@ -1,12 +1,13 @@
-import { Router } from "express";
-import { addProduit, getProduit, removeProduit, updateProduit } from "../controllers/Produit.js";
+import express from 'express';
+const produitRouter = express.Router();
 
-const produitRouter = Router();
+// Importer vos fonctions du contrôleur de Produit ici
+import { produitList, addProduit, updateProduit, removeProduit } from '../controllers/Produit.js';
 
-produitRouter
-    .get("/", getProduit)
-    .post("/", addProduit)
-    .put("/:id", updateProduit)
-    .delete("/:id", removeProduit);
+// Définir les routes
+produitRouter.get('/produits', produitList);
+produitRouter.post('/produits', addProduit);
+produitRouter.put('/produits/:id', updateProduit);
+produitRouter.delete('/produits/:id', removeProduit);
 
 export default produitRouter;

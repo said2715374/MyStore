@@ -1,5 +1,5 @@
 // Importer le modèle de Magasin
-import Magasin from "../models/Magasin.js";
+import Magasin from "../models/Region.js";
 
 // Récupérer la liste des magasins
 export const magasinList = async (req, res) => {
