@@ -20,6 +20,7 @@ import modePaiementRouter from "./routes/Mode_paiementRoute.js";
 import produitRouter from "./routes/ProduitRoute.js";
 import RegionRoute from "./routes/RegionRoute.js"
 import transactionRouter from "./routes/TransactionRoute.js";
+import routeAuth from './routes/routeAuth.js'
 
 
 
@@ -45,6 +46,7 @@ app.use("/modePaiementRouter",modePaiementRouter)
 app.use("/produitRouter",produitRouter)
 app.use("/RegionRoute",RegionRoute)
 app.use("/transactionRouter",transactionRouter)
+app.use('/login', routeAuth)
 
 
 

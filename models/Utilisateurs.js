@@ -10,8 +10,12 @@ const Utilisateur = database.define('Utilisateur', {
     prenom: { type: DataTypes.STRING, allowNull: false },
     DateNaissance: { type: DataTypes.DATE },
     Telephone: { type: DataTypes.DECIMAL },
-    MotDePasse: { type: DataTypes.STRING }
+    email: { type: DataTypes.STRING, allowNull: false, unique: true },  // Ajout de l'attribut email
+    MotDePasse: { type: DataTypes.STRING, allowNull: false }            // Mise à jour pour s'assurer que le mot de passe n'est pas nul
 })
+
+
+
 
 // Exporter le modèle d'utilisateur
 export default Utilisateur;
