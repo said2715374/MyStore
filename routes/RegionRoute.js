@@ -2,21 +2,21 @@ import express from 'express';
 // Assuming your controller functions are in a file named `regionController.js`
 import { createRegion, getAllRegions, getRegionById, updateRegion, deleteRegion } from '../controllers/Region.js';
 
-const router = express.Router();
+const RegionRoute = express.Router();
 
 // Route to create a new region
-router.post('/regions', createRegion);
+RegionRoute.post('/regions', createRegion);
 
 // Route to get all regions
-router.get('/regions', getAllRegions);
+RegionRoute.get('/regions', getAllRegions);
 
 // Route to get a single region by ID
-router.get('/regions/:id', getRegionById);
+RegionRoute.get('/regions/:id', getRegionById);
 
 // Route to update a region
-router.put('/regions/:id', updateRegion);
+RegionRoute.put('/regions/:id', updateRegion);
 
 // Route to delete a region
-router.delete('/regions/:id', deleteRegion);
+RegionRoute.delete('/regions/:id', deleteRegion);
 
-export default router;
+export default RegionRoute;
